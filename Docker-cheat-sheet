@@ -8,6 +8,7 @@ docker rmi <imagename>/<imageid>
 docker container run --name cont-nginx -d -p 80:8081 nginx
 curl localhost:portno.
 service nginx status
+docker images | grep <imagename>
 
 Lifecycle
 docker create creates a container but does not start it.
