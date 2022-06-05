@@ -1,3 +1,14 @@
+service docker status
+service docker start
+docker images
+docker ps
+docker ps -a
+docker rm <containerid>/<containername>
+docker rmi <imagename>/<imageid>
+docker container run --name cont-nginx -d -p 80:8081 nginx
+curl localhost:portno.
+service nginx status
+
 Lifecycle
 docker create creates a container but does not start it.
 docker rename allows the container to be renamed.
@@ -38,3 +49,8 @@ docker logout to logout from a registry.
 docker search searches registry for image.
 docker pull pulls an image from registry to local machine.
 docker push pushes an image to the registry from local machine.
+
+docker container stop <container id>
+docker container start <container id>
+docker container restart <container id>
+docker container prune <container id>  prune (the best one!) removes all stopped containers.
