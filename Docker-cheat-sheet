@@ -22,6 +22,26 @@ docker image tag <oldtag> <newtag>
 docker volume create <volumename>
 docker volume prune
 docker run -it -v </HostPath>:/<Container inside path>
+--------------------------------------------------------------------------
+Docker logs - The docker logs command shows information logged by a running container
+
+Docker stats - The docker stats command returns a live data stream for running containers.
+
+Docker events - Get event information from the Docker daemon. Information can include historical information and real-time information
+
+Docker top  - Docker's top command allows users to display the output for the main process of a given container ID or name
+
+Docker exec - The docker exec command runs a new command in a running container. 
+docker container logs <containerid>
+docker container logs --details <containerid>
+docker events
+docker stats --help
+docker stats <containerid>
+docker top
+CMD ["Sleep", "5"]
+combination of Entrypoint & Sleep
+ENTRYPOINT [Sleep]
+CMD ["5"]
 
 Lifecycle
 docker create creates a container but does not start it.
