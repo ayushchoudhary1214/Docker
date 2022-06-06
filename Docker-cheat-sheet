@@ -6,9 +6,20 @@ docker ps -a
 docker rm <containerid>/<containername>
 docker rmi <imagename>/<imageid>
 docker container run --name cont-nginx -d -p 80:8081 nginx
-curl localhost:portno.
+curl http://localhost:portno.
 service nginx status
 docker images | grep <imagename>
+docker search <imagename> - It will search images from docker hub
+docker commit <containerid> <newimagename:tag>- It will create image from container
+The commit operation will not include any data contained in volumes mounted inside the container.
+docker network create -d macvlan --subnet=10.10.1.0/24 --ip-range=10.10.1.3/24 <networkname>
+docker network inspect <networkname>
+Sed: Search/Replace to edit files inside Docker containers
+RUN sed -i "s/8081/80/g" /etc/apache/ports.conf
+docker compose up
+docker cp /tmp/abc.txt <container_name:/home>
+docker image tag <oldtag> <newtag>
+
 
 Lifecycle
 docker create creates a container but does not start it.
