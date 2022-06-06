@@ -19,7 +19,9 @@ RUN sed -i "s/8081/80/g" /etc/apache/ports.conf
 docker compose up
 docker cp /tmp/abc.txt <container_name:/home>
 docker image tag <oldtag> <newtag>
-
+docker volume create <volumename>
+docker volume prune
+docker run -it -v </HostPath>:/<Container inside path>
 
 Lifecycle
 docker create creates a container but does not start it.
