@@ -17,6 +17,7 @@ docker network inspect <networkname>
 Sed: Search/Replace to edit files inside Docker containers
 RUN sed -i "s/8081/80/g" /etc/apache/ports.conf
 docker compose up
+ADD allows <src> to be a URL
 docker cp /tmp/abc.txt <container_name:/home>
 docker image tag <oldtag> <newtag>
 docker volume create <volumename>
