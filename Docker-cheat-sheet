@@ -44,6 +44,10 @@ combination of Entrypoint & Sleep
 ENTRYPOINT [Sleep]
 CMD ["5"]
 
+Docker save -o <path for generated tar file> <imagename>
+scp -i <.pemfile> <filename> <username@ip>
+Docker load -i <path to image tar file>
+
 Lifecycle
 docker create creates a container but does not start it.
 docker rename allows the container to be renamed.
