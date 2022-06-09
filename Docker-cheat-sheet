@@ -48,6 +48,13 @@ Docker save -o <path for generated tar file> <imagename>
 scp -i <.pemfile> <filename> <username@ip>
 Docker load -i <path to image tar file>
 
+
+The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the -
+-build-arg <varname>=<value> flag. If a user specifies a build argument that was not defined in the Dockerfile, the build outputs an error.
+ARG MODEL_TO_COPY
+COPY application ./application
+COPY $MODEL_TO_COPY ./application/$MODEL_TO_COPY
+
 Lifecycle
 docker create creates a container but does not start it.
 docker rename allows the container to be renamed.
