@@ -1,3 +1,4 @@
+docker run --publish 8080:8080 docker-gs-ping
 service docker status
 service docker start
 docker images
