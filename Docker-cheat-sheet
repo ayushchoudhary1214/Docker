@@ -76,6 +76,10 @@ docker diff shows changed files in the container's FS.
 Import / Export
 docker cp copies files or folders between a container and the local filesystem.
 docker export turns container filesystem into tarball archive stream to STDOUT.
+  export      Export a container\'s filesystem as a tar archive
+  import      Import the contents from a tarball to create a filesystem image
+  load        Load an image from a tar archive or STDIN
+  save        Save one or more images to a tar archive 
 
 Lifecycle
 docker images shows all images.
