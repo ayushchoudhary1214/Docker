@@ -45,9 +45,9 @@ combination of Entrypoint & Sleep
 ENTRYPOINT [Sleep]
 CMD ["5"]
 
-Docker save -o <path for generated tar file> <imagename>
+Docker save -o <exportedname>.tar <path for generated tar file> <imagename>
 scp -i <.pemfile> <filename> <username@ip>
-Docker load -i <path to image tar file>
+Docker load -i <exportname>.tar <path to image tar file>
 
 
 The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the -
